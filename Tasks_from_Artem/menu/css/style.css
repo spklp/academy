@@ -1,0 +1,35 @@
+body {
+    margin: auto;
+    width: 500px;
+}
+header {
+    border-bottom: 1px solid #2b669a;
+    padding: 7px;
+    height: auto;
+    position: center;
+    margin-bottom: 5px;
+}
+div.content {
+    border: 1px solid #8a6d3b;
+    padding: 5px;
+}
+
+footer {
+    border-top: 1px solid #2b669a;
+    padding: 7px;
+    margin-top: 5px;
+}
+.links {
+    justify-content: center;
+    display: flex;
+}
+a {
+    color: #0f0f0f;
+    text-transform: capitalize;
+    font-size: 26px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+a:link {
+    text-decoration: none;
+}
