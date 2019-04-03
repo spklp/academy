@@ -57,12 +57,12 @@ return [
         'myProjects' => [
             [
                 'name'  => 'StoneHunters',
-                'url'   => 'academy/Lesson3/profile.php',
+                'url'   => 'academy/lesson3/profile.php',
                 'duty'  => 'Текстовый квест с элементами рпг.'
             ],
             [
                 'name'  => 'PhoneBase',
-                'url'   => 'academy/Lesson3/profile.php',
+                'url'   => 'academy/lesson3/profile.php',
                 'duty'  => 'База данных организации, для оптимизации поиска клиентов.'
             ],
             [

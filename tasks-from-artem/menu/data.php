@@ -3,19 +3,19 @@
 return [
     'lessons' => [
         [
-            'name'  => 'Lesson1',
+            'name'  => 'lesson1',
             'url'   => 'lesson1.php',
         ],
         [
-            'name'  => 'Lesson2',
+            'name'  => 'lesson2',
             'url'   => 'lesson2.php',
         ],
         [
-            'name'  => 'Lesson3',
+            'name'  => 'lesson3',
             'url'   => 'lesson3.php',
         ],
         [
-            'name'  => 'Lesson4',
+            'name'  => 'lesson4',
             'url'   => 'lesson4.php',
         ],
     ],
