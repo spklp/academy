@@ -6,9 +6,9 @@ class Book extends Product
     protected $author;
     protected $pageCount;
 
-    public function __construct($name, $sku, $category, $weight, $image, $originalPrice, $price, $author, $pageCount)
+    public function __construct($name, $sku, $weight, $image, $originalPrice, $price, $author, $pageCount)
     {
-        parent::__construct($name, $sku, $category, $weight, $image, $originalPrice, $price);
+        parent::__construct($name, $sku, $weight, $image, $originalPrice, $price);
         $this->author = $author;
         $this->pageCount = $pageCount;
     }

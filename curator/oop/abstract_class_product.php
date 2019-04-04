@@ -12,12 +12,26 @@ abstract class Product
 
     public function getOriginalPrice()
     {
-        return "$this->originalPrice<br>";
+        return $this->originalPrice;
     }
 
     public function getDiscountPrice()
     {
-        return "$this->price<br>";
+        return $this->price;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function getSku(){
+        return $this->sku;
     }
 
     abstract public function getProductInfo();
