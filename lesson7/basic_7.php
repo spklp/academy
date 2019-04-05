@@ -5,6 +5,8 @@ abstract class Product
     public $name;
     public $price;
     public $weight;
+    public static $companyName = 'GG Company';
+    const YEAR_START = 2001;
 
     public function __construct(string $name, int $price, float $weight)
     {
@@ -22,9 +24,8 @@ abstract class Product
 
     }
 
-    public function showImage()
-    {
-        return $this->name;
+    public static function showCompanyInfo (){
+        echo self::$companyName . " работает с " . self::YEAR_START . " года.<br>";
     }
 }
 
@@ -65,6 +66,9 @@ $chocolate->showImage();
 
 $candy = new Candy('name', 50, 0.01);
 $candy->showImage();
+
+Product::showCompanyInfo();
+$chocolate->showCompanyInfo ();
 
 
 

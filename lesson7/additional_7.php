@@ -1,7 +1,23 @@
 <?php
 
+interface iPrice
+{
+    public function getPrice();
+}
+
+interface iImage
+{
+    public function showImage();
+}
+
+interface iInfo
+{
+    public function getInfo();
+}
+
+
 // Абстрактный класс продукт
-abstract class Product
+abstract class Product implements iPrice, iImage, iInfo
 {
     protected $name;
     protected $price;
@@ -17,6 +33,10 @@ abstract class Product
         Product::$count++;
     }
 
+    public function getPrice()
+    {
+        return $this->price;
+    }
 // Публичная функция для всех объектов
     public function getInfo()
     {
@@ -27,14 +47,14 @@ abstract class Product
 
     }
 
-// Аьстрактная функция для изображения
-    abstract protected function showImage();
-
 // Счетчик объектов (статический)
-    public static function getCount ()
+    public function getCount()
     {
-        echo Product::$count;
+        return self::$count ;
     }
+
+
+
 }
 
 
@@ -57,6 +77,11 @@ class Chocolate extends Product
         echo "<div style='width: 200px; height: 200px; background-image: url(img/chocolate.jpg);'></div>";
     }
 
+    public function __set($name, $value)
+    {
+        echo "Нельзя присвоить значение $value свойству $name<br>";
+    }
+
 }
 
 
@@ -73,14 +98,28 @@ class Candy extends Product
     {
         echo "<div style='width: 100px; height: 100px; background-image: url(img/candy.png);'></div>";
     }
+
+    public function __get($name)
+    {
+        echo "Нельзя обратится к свойству $name<br>";
+    }
 }
 
 
 $chocolate = new Chocolate('Alpen Gold', 110, 0.1, 200);
 
 $candy = new Candy('Коровка', 50, 0.01);
+echo "<br>________________________________________________________________<br>";
 
-Product::getCount();
+
+$chocolate->abc = 10;  // проверка __set
+echo $candy->randomVelue;  // проверка __get
+
+// проверка интерфейсов
+echo $candy->getPrice();
+echo $candy->getInfo();
+echo $candy->showImage();
+
 
 
 
