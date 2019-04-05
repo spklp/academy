@@ -1,6 +1,6 @@
 <?php
 
-abstract class Alian
+abstract class Alien
 {
     protected $name;
     protected $numberEyes;

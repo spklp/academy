@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Alian.php';
+require_once 'Alien.php';
 require_once 'Martian.php';
 
 $armyMartians = [];
@@ -16,4 +16,4 @@ foreach ($armyMartians as $martian){
     echo $martian->getInfo();
 }
 
-echo "<h3>Всего порабощено: " . Alian::getAllNumberEarthlings() . " землян.</h3>";
+echo "<h3>Всего порабощено: " . Alien::getAllNumberEarthlings() . " землян.</h3>";

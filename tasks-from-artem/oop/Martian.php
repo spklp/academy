@@ -1,6 +1,6 @@
 <?php
 
-class Martian extends Alian
+class Martian extends Alien
 {
     protected $numberEnslavedEarthlings;
 
@@ -8,7 +8,7 @@ class Martian extends Alian
     {
         parent::__construct($name, $numberEyes, $numberLimbs, $skinColor);
         $this->numberEnslavedEarthlings = $numberEnslavedEarthlings;
-        Alian::$allNumberEarthlings += $numberEnslavedEarthlings;
+        Alien::$allNumberEarthlings += $numberEnslavedEarthlings;
     }
 
     public function getNumberEnslavedEarthlings ()
