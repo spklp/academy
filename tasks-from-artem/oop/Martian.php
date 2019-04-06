@@ -18,8 +18,10 @@ class Martian extends Alien
 
     public function getInfo()
     {
-        return "Инопланетянин по имени " . $this->name . " имеет " . $this->numberEyes . " глаз, " .
-                $this->numberLimbs . " конечностей и " . $this->skinColor .
-                " цвет кожи, за время вторжения поработил всего " . $this->numberEnslavedEarthlings . " землян.<br>";
+        return "Имя инопланетянина: " . $this->name .
+                "<br>Количество глаз: " . $this->numberEyes .
+                "<br>Количество конечностей: " . $this->numberLimbs .
+                "<br>Цвет кожи: " . $this->skinColor .
+                "<br>За время вторжения поработил: " . $this->numberEnslavedEarthlings . " землян.";
     }
 }

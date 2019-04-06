@@ -37,7 +37,8 @@ abstract class Alien
         return $this->skinColor;
     }
 
-    public static function getAllNumberEarthlings (){
+    public static function getAllNumberEarthlings ()
+    {
         return self::$allNumberEarthlings;
     }
 
