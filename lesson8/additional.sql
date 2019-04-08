@@ -70,3 +70,16 @@ ALTER TABLE `books`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+// команды для дз
+
+SELECT * FROM books
+ALTER table books add (collor varchar(30) default 'красный' not null, readed boolean default false not null,
+ pages varchar(30) not null)
+
+UPDATE books SET color = 'серый', pages = 1403, readed = true WHERE id = 1
+UPDATE books SET color = 'черный', pages = 576, readed = true WHERE id = 2
+UPDATE books SET color = 'белый', pages = 874, readed = true WHERE id = 3
+UPDATE books SET color = 'коричневый', pages = 659, readed = true WHERE id = 4
+UPDATE books SET color = 'черный', pages = 834, readed = true WHERE id = 5
