@@ -1,9 +1,7 @@
-<input type="text" name="comment">
-<input type="submit">
-<?php
 
-if($_POST['comment'])
-{
-    echo 1111;
+<?php
+$link = "http:/dsa'da.com";
+$pattern = '/(\<|\>|\'|\")/';
+if (!get_headers('https://docs.microsoft.cos')){
+    echo 123;
 }
-?>

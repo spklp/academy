@@ -143,33 +143,15 @@ require_once 'connect-DB.php';
                         <input type="text" placeholder="Комментарий" name="comment" required>
                         <input type="submit">
                     </form>
-                    <?php
-
-                    if($_POST['comment'])
-                    {
-                        $newName = $_POST['name'];
-                        $newComment = $_POST['comment'];
-                        $connection->query("INSERT INTO profile.comments(name, comment) VALUES ('$newName', '$newComment')");
-                    }
-
-                    $comments = $connection->query("SELECT * FROM profile.comments");
-                    if ($comments->rowCount() == 0)
-                    {
-                        echo "Здесь пока нет никаких комментариев :(";
-                    }
-                    else
-                    {
-                        echo "<div style='margin-top: 10px;'>";
-                        foreach ($comments as $comment)
-                        {
-                            echo "<div style='border: 1px solid gray; margin-bottom: 5px;'>";
-                            echo "<span>" . $comment['name'] . " (" . $comment['time'] . ")" . " : " .
-                                    $comment['comment'] . "</span>";
-                            echo "</div>";
-                        }
-                        echo "</div>";
-                    }
-                    ?>
+                    <?php if ($comments->rowCount() == 0): ?>
+                        <h2><?= $noComments; ?></h2>
+                    <?php else: ?>
+                        <?php foreach ($comments as $comment): ?>
+                        <div style='border: 1px solid gray; margin-top: 5px;'>
+                        <span><?= $comment['name']; ?> (<?= $comment['time']; ?>): <?= $comment['comment']; ?></span>
+                        </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div><!--//summary-->
             </section><!--//comment section-->
 
