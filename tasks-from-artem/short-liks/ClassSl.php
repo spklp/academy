@@ -58,12 +58,12 @@ class Sl
         $this->link = $_POST['link'];
     }
 
-    // проверка ссылки на ошибку 404
+    // проверка ссылки на ошибку 4##
     public function checkPostLink ()
     {
         $link = $this->link;
         $answerLink = @get_headers($link);
-        $res = !(preg_match("/404 not found/i", $answerLink[0]));
+        $res = !(preg_match("/4[0-9]{2}/i", $answerLink[0]));
         if ($res == false)
         {
             $this->resultCheckPostLink = true;
